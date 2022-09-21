@@ -1,4 +1,6 @@
 // Extends EditorUi to update I/O action states based on availability of backend
+// import html2canvas from 'html2canvas';
+// import 'js-file-download';
 (function () {
 let editorUiInit = EditorUi.prototype.init;
 
@@ -19,6 +21,20 @@ EditorUi.prototype.init = function () {
     //     this.actions.get('export').setEnabled(enabled);
     //   }));
     // }
+    // if (!Editor.useLocalStorage){
+    //     var filename = document.getElementById('filename').value;
+	// 	if(filename == ''){
+	// 		filename = 'WebUML';
+	// 	}
+	// 	html2canvas(document.querySelector("#canvas")).then(canvas => {
+	// 		var download = document.createElement('a');
+	// 		download.href = canvas.toDataURL("image/png");
+	// 		download.download = filename+'.png';
+	// 		download.click();
+	// 	});
+    // }
+		
+	
 
     this.actions.get('open').setEnabled(enabled || Graph.fileSupport);
     this.actions.get('import').setEnabled(enabled || Graph.fileSupport);

@@ -459,10 +459,12 @@ if (typeof(mxBasePath) != 'undefined' && mxBasePath.length > 0)
 	}
 
 	mxClient.basePath = mxBasePath;
+	mxClient.mainPath = 'drawio';
 }
 else
 {
 	mxClient.basePath = 'drawio/javascript/src';
+	mxClient.mainPath = 'drawio';
 }
 
 /**
@@ -785,6 +787,18 @@ if (mxForceIncludes || !(typeof module === 'object' && module.exports != null))
 	mxClient.include(mxClient.basePath+'/js/io/mxDefaultToolbarCodec.js');
 	mxClient.include(mxClient.basePath+'/js/io/mxDefaultPopupMenuCodec.js');
 	mxClient.include(mxClient.basePath+'/js/io/mxEditorCodec.js');
+
+	mxClient.include(mxClient.mainPath+'/js/EditorUi.js');
+	mxClient.include(mxClient.mainPath+'/js/Editor.js');
+	mxClient.include(mxClient.mainPath+'/js/Sidebar.js');
+	mxClient.include(mxClient.mainPath+'/js/Graph.js');
+	mxClient.include(mxClient.mainPath+'/js/Format.js');
+	mxClient.include(mxClient.mainPath+'/js/Shapes.js');
+	mxClient.include(mxClient.mainPath+'/js/Actions.js');
+	mxClient.include(mxClient.mainPath+'/js/Menus.js');
+	mxClient.include(mxClient.mainPath+'/js/Toolbar.js');
+	mxClient.include(mxClient.mainPath+'/js/Dialogs.js');
+	mxClient.include(mxClient.mainPath+'/loader.js');
 // PREPROCESSOR-REMOVE-START
 }
 // PREPROCESSOR-REMOVE-END
