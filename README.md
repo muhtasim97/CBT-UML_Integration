@@ -5,7 +5,7 @@ This is a part of big project. This small part demonstrate the implementation of
 
 ## Installation
 
-Hope you have node or yarn installed in your machine.
+Hope you have npm or yarn installed in your machine.
 
 ```sh
 npm install 
